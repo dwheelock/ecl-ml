@@ -24,7 +24,7 @@ dRelatives:=DATASET([
   {7769,'Eliza Kennedy',21},
   {16890,'Andrew Breyer',236234},
   {9023,'Shay Thomas',236234},
-  {7534,'Clarence Ginsburg Jr.',555},
+  {7534,'Clarence Ginsburg Jr.',0},
   {123456,'Kris Roberts',83265},
   {705948,'Lindsay Roberts',123456},
   {83265,'Sandra Sotomayor',7534},
@@ -39,7 +39,9 @@ dRelatives:=DATASET([
 ],{UNSIGNED id;STRING name;UNSIGNED parent;});
 
 dLabels:=PROJECT(dRelatives,TRANSFORM(VL.Types.GraphLabels,SELF.label:=LEFT.name;SELF:=LEFT;));
-dRelationships:=PROJECT(dRelatives,TRANSFORM(VL.Types.GraphRelationships,SELF.id:=LEFT.parent;SELF.linkid:=LEFT.id;))(id!=555);
+dRelationships:=PROJECT(dRelatives,TRANSFORM(VL.Types.GraphRelationships,SELF.id:=LEFT.parent;SELF.linkid:=LEFT.id;));
 
 VL.D3.Graph('Tree','FamilyTree',dLabels,dRelationships);
 VL.D3.Graph('Chord','FamilyChord',dLabels,dRelationships);
+dLabels;
+dRelationships;

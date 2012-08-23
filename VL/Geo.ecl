@@ -1,4 +1,4 @@
-//---------------------------------------------------------------------------
+ï»¿//---------------------------------------------------------------------------
 // Module that contains standard coding for known geographic regions
 //---------------------------------------------------------------------------
 EXPORT Geo:=MODULE
@@ -58,7 +58,7 @@ EXPORT Geo:=MODULE
     {'BH','Bahrain','145','142'},
     {'BI','Burundi','014','002'},
     {'BJ','Benin','011','002'},
-    {'BL','Saint Barthélemy','029','019'},
+    {'BL','Saint Barthelemy','029','019'},
     {'BM','Bermuda','021','019'},
     {'BN','Brunei Darussalam','035','142'},
     {'BO','Bolivia, Plurinational State of','005','019'},
@@ -76,7 +76,7 @@ EXPORT Geo:=MODULE
     {'CF','Central African Republic','017','002'},
     {'CG','Congo','017','002'},
     {'CH','Switzerland','155','150'},
-    {'CI','Côte dIvoire','011','002'},
+    {'CI','Cote dIvoire','011','002'},
     {'CK','Cook Islands','061','009'},
     {'CL','Chile','005','019'},
     {'CM','Cameroon','017','002'},
@@ -85,7 +85,7 @@ EXPORT Geo:=MODULE
     {'CR','Costa Rica','013','019'},
     {'CU','Cuba','029','019'},
     {'CV','Cape Verde','011','002'},
-    {'CW','Curaçao','000','000'},
+    {'CW','Curacao','000','000'},
     {'CX','Christmas Island','000','000'},
     {'CY','Cyprus','145','142'},
     {'CZ','Czech Republic','151','150'},
@@ -220,7 +220,7 @@ EXPORT Geo:=MODULE
     {'PW','Palau','057','009'},
     {'PY','Paraguay','005','019'},
     {'QA','Qatar','145','142'},
-    {'RE','Réunion','014','002'},
+    {'RE','Reunion','014','002'},
     {'RO','Romania','151','150'},
     {'RS','Serbia','039','150'},
     {'RU','Russian Federation','151','150'},

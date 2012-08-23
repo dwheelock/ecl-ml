@@ -64,7 +64,7 @@ EXPORT D3:=MODULE
       dRolled:=ROLLUP(SORT(dLowest,id),LEFT.id=RIGHT.id,TRANSFORM(RECORDOF(LEFT),SELF.json:=LEFT.json+','+RIGHT.json;SELF:=LEFT;));
       dJoined:=JOIN(d(level<i),dRolled,LEFT.linkid=RIGHT.id,TRANSFORM(RECORDOF(LEFT),SELF.json:=IF(RIGHT.json='','','{"name":"'+LEFT.child+'","children":['+RIGHT.json+']}');SELF:=LEFT;),LEFT OUTER);
       dFinal:=PROJECT(dRolled,TRANSFORM(RECORDOF(LEFT),SELF.json:='{"name":"'+LEFT.parent+'","children":['+LEFT.json+']}';SELF:=LEFT;));
-      RETURN IF(COUNT(dRolled)=1,dFinal,dJoined);
+      RETURN IF(COUNT(dJoined)=0,dFinal,dJoined);
     END;
     dJson:=LOOP(dWithLevels,iLowestLevel,tConstructJson(ROWS(LEFT),iLowestLevel-COUNTER+1));
     RETURN dJson[1].json;
